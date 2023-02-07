@@ -1,8 +1,10 @@
-function createLi(text) {
+function createLi(text, id) {
   const li = document.createElement("li");
+  li.classList.add;
   const a = document.createElement("a");
   li.appendChild(a);
 
+  a.id = id;
   a.src = "#";
   a.textContent = text;
 
@@ -15,9 +17,9 @@ function createNav() {
 
   nav.appendChild(ul);
 
-  const home = createLi("HOME");
-  const menu = createLi("MENU");
-  const about = createLi("ABOUT");
+  const home = createLi("HOME", "home");
+  const menu = createLi("MENU", "menu");
+  const about = createLi("ABOUT", "about");
 
   ul.appendChild(home);
   ul.appendChild(menu);
@@ -59,22 +61,5 @@ function loadPage() {
   content.appendChild(main);
   content.appendChild(footer);
 }
-
-//     <nav>
-//     <ul>
-//       <li><a href="#">HOME</a></li>
-//       <li><a href="#">MENU</a></li>
-//       <li><a href="#">ABOUT</a></li>
-//     </ul>
-//   </nav>
-/* <main class="home">
-<div class="restuarant-information-contaier">
-  <h1 class="restaurant-name">Capricioson</h1>
-  <h2 class="restaurant-type">PIZZERIA</h2>
-</div>
-<hr />
-<p class="restaurant-slogan">The best place to eat good food!</p>
-<button class="restaurant-menu-btn">CHECK THE MENU</button>
-</main> */
 
 export default loadPage;

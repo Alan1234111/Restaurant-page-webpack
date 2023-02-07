@@ -1,5 +1,6 @@
 function resetMainContent(main) {
   main.innerHTML = "";
+  main.classList = "";
 }
 
 function createDish(dishName, dishInformation, dishCost) {
