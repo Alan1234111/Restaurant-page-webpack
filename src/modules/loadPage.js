@@ -36,7 +36,7 @@ function createFooter() {
   p.textContent = "Developed with ♥ by ";
 
   const link = document.createElement("a");
-  link.src = "https://github.com/Alan1234111/Restaurant-page-webpack";
+  link.href = "https://github.com/Alan1234111/Restaurant-page-webpack";
   link.textContent = "Alan Pason";
 
   footer.appendChild(p);
@@ -56,6 +56,8 @@ function loadPage() {
   const nav = createNav();
   const main = createMain();
   const footer = createFooter();
+
+  console.log(footer);
 
   content.appendChild(nav);
   content.appendChild(main);
